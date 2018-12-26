@@ -21,7 +21,7 @@ module.exports.models = {
      *                                                                          *
      ***************************************************************************/
     connection: process.env.DB_ADAPTER || 'localDiskDb',
-    migrate: 'alter',
+    migrate: 'safe',
 
     updateOrCreate: function(criteria, values, cb){
         var self = this; // reference for use by callbacks

@@ -6,6 +6,7 @@ WORKDIR /app
 
 RUN apk upgrade --update \
     && apk add bash git ca-certificates \
+    && npm i npm@latest -g \
     && npm install -g bower \
     && npm --unsafe-perm --production install \
     && apk del git \
@@ -14,7 +15,7 @@ RUN apk upgrade --update \
         /app/screenshots \
         /app/test
 
-EXPOSE 1337
+EXPOSE 8888
 
 VOLUME /app/kongadata
 

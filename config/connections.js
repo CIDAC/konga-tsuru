@@ -76,11 +76,11 @@ module.exports.connections = {
   postgres: {
     adapter: 'sails-postgresql',
     url: process.env.DB_URI,
-    host: process.env.DB_HOST || 'localhost',
-    user:  process.env.DB_USER || 'postgres',
-    password: process.env.DB_PASSWORD || 'admin1!',
-    port: process.env.DB_PORT || 5432,
-    database: process.env.DB_DATABASE ||'konga_database',
+    host: process.env.PG_HOST || 'localhost',
+    user:  process.env.PG_USER || 'postgres',
+    password: process.env.PG_PASSWORD || 'admin1!',
+    port: process.env.PG_PORT || 5432,
+    database: process.env.PG_DATABASE ||'konga_database',
     // schema: process.env.DB_PG_SCHEMA ||'public',
     poolSize: process.env.DB_POOLSIZE || 10,
     ssl: process.env.DB_SSL ? true : false // If set, assume it's true
